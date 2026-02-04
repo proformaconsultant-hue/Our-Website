@@ -3,6 +3,7 @@ import './App.css'
 import { HomePage } from './HomePage.jsx'
 import { AboutPage } from './AboutPage.jsx'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import ScrollToTop from './components/ScrollToTop.jsx'
 import {Team} from './Team.jsx'
 import { Contact } from './Contact.jsx'
 import { Accounting } from './Accounting.jsx'
@@ -26,6 +27,7 @@ function App() {
     <>
      <div>
       <Router>
+        <ScrollToTop />
         <Routes>
           <Route path='/' element={<HomePage/>}/>
 

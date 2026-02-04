@@ -1,5 +1,4 @@
-
-import { MapPin, Phone, Mail, Facebook } from 'lucide-react';
+import { MapPin, Phone, Mail, Facebook, Instagram,Linkedin } from 'lucide-react';
 import proformaLogo from '../images/proforma-logo-1.png';
 import { Link } from 'react-router-dom';
 
@@ -15,6 +14,14 @@ export function Footer() {
           <div className="footer-social-icons">
             <a href="https://www.facebook.com/profile.php?id=61586117833991" target="_blank" rel="noopener noreferrer" className="footer-social-link">
               <Facebook size={20} />
+            </a>
+
+            <a href="https://www.instagram.com/proformainsights/" target="_blank" rel="noopener noreferrer" className="footer-social-link">
+              <Instagram size={20} />
+            </a>
+
+            <a href="https://www.linkedin.com/company/proforma-insight/" target="_blank" rel="noopener noreferrer" className="footer-social-link">
+              <Linkedin size={20} />
             </a>
           </div>
         </div>
@@ -49,10 +56,9 @@ export function Footer() {
         <div className="footer-services-section">
           <h3 className="footer-section-title">Our Business</h3>
           <ul className="footer-links-list">
-            <li><Link to="#accounting">Proforma Consultancy</Link></li>
-            <li><Link to="#finance">Om Finance Limited</Link></li>
-            <li><Link to="#packages">ABC Tution Centre</Link></li>
-            <li><Link to="#printpack">Print Pack Pvt. Ltd</Link></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61585342955323" target="_blank" rel="noopener noreferrer">Proforma Consultancy</a></li>
+            <li><a href="https://www.facebook.com/ABCTutoringService01/" target="_blank" rel="noopener noreferrer">ABC Tution Centre</a></li>
+            
           </ul>
         </div>
       </div>

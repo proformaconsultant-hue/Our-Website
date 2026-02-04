@@ -1,10 +1,31 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { Header } from "./components/Header.jsx";
 import { Footer } from "./components/Footer";
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Linkedin, Youtube, Send } from "lucide-react";
 import './Contact.css';
+import emailjs from '@emailjs/browser';
 
 export const Contact = () => {
+  const formRef = useRef();
+  const [status, setStatus] = useState(null); // null | 'sending' | 'success' | 'error'
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    setStatus('sending');
+
+    // Replace the following IDs with your EmailJS service/template/public key
+    const SERVICE_ID = 'service_9nzmdo5';
+    const TEMPLATE_ID = 'template_n5f6yv6';
+    const PUBLIC_KEY = '0h69Yqxw_Yst8bgx3';
+
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
+      .then(() => {
+        setStatus('success');
+        formRef.current.reset();
+      })
+      .catch(() => setStatus('error'));
+  };
+
   return (
     <div className="contact-page">
       <Header/>
@@ -62,7 +83,7 @@ export const Contact = () => {
                 <a href="https://www.instagram.com/proformaconsultants/" target="_blank" rel="noopener noreferrer" className="social-link">
                   <Instagram size={24} />
                 </a>
-                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="social-link">
+                <a href="https://www.linkedin.com/company/proforma-insight/" target="_blank" rel="noopener noreferrer" className="social-link">
                   <Linkedin size={24} />
                 </a>
                 <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" className="social-link">
@@ -140,35 +161,35 @@ export const Contact = () => {
             <div className="form-section">
               <h2 className="section-title">Quick Inquiry</h2>
               <div className="form-container">
-                <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+                <form ref={formRef} className="contact-form" onSubmit={sendEmail}>
                   <div className="form-row">
                     <div className="form-group">
-                      <label className="form-label">First Name *</label>
+                      <label className="form-label">First Name</label>
                       <input type="text" name="first-name" required placeholder="Enter your first name" />
                     </div>
                     <div className="form-group">
-                      <label className="form-label">Last Name *</label>
+                      <label className="form-label">Last Name</label>
                       <input type="text" name="last-name" required placeholder="Enter your last name" />
                     </div>
                   </div>
                   
                   <div className="form-group">
-                    <label className="form-label">Email *</label>
+                    <label className="form-label">Email</label>
                     <input type="email" name="email" required placeholder="Enter your email address" />
                   </div>
                   
                   <div className="form-group">
                     <label className="form-label">Phone Number</label>
-                    <input type="tel" name="phone" placeholder="Enter your phone number" />
+                    <input type="tel" name="phone" required placeholder="Enter your phone number" />
                   </div>
                   
                   <div className="form-group">
-                    <label className="form-label">Subject *</label>
+                    <label className="form-label">Subject</label>
                     <input type="text" name="subject" required placeholder="What is this regarding?" />
                   </div>
                   
                   <div className="form-group">
-                    <label className="form-label">Message *</label>
+                    <label className="form-label">Message</label>
                     <textarea 
                       className="form-textarea" 
                       name="message"
@@ -177,10 +198,13 @@ export const Contact = () => {
                     ></textarea>
                   </div>
                   
-                  <button className="form-submit-button" type="submit">
+                  <button className="form-submit-button" type="submit" disabled={status === 'sending'}>
                     <Send size={20} />
-                    Send Message
+                    {status === 'sending' ? 'Sending...' : 'Send Message'}
                   </button>
+
+                  {status === 'success' && <p className="form-status success">Message sent — we will contact you shortly.</p>}
+                  {status === 'error' && <p className="form-status error">Failed to send message. Please try again later.</p>}
                 </form>
               </div>
             </div>

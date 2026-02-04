@@ -46,9 +46,9 @@ export const Header = () => {
             </div>
             
             <div className="top-bar-contact">
-              <a href="mailto:contact@proforma.com" className="contact-link">
+              <a href="mailto:proformadigitaltech@gmail.com" className="contact-link">
                 <Mail size={14} />
-                <span>contact@proforma.com</span>
+                <span>proformadigitaltech@gmail.com</span>
               </a>
               <a href="tel:+977061545445" className="contact-link">
                 <Phone size={14} />
@@ -63,7 +63,7 @@ export const Header = () => {
               <a href="https://www.instagram.com/proformainsights/" target="_blank" rel="noopener noreferrer" className="social-link">
                 <Instagram size={14} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-link">
+              <a href="https://www.linkedin.com/company/proforma-insight/" target="_blank" rel="noopener noreferrer" className="social-link">
                 <Linkedin size={14} />
               </a>
               <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="social-link">

@@ -23,7 +23,12 @@ export const AboutPage = () => {
     "Personalized solutions tailored to client needs",
     "Comprehensive service offerings under one roof",
     "Proven track record of client success",
-    "Continuous support and guidance"
+    "Continuous support and guidance",
+    "Proactive compliance management and risk mitigation",
+    "Advanced technology integration for operations",
+    "Transparent communication and regular updates",
+    "Commitment to long-term partnerships",
+    "Focus on sustainable growth and success"
   ];
 
   return (
@@ -139,10 +144,7 @@ export const AboutPage = () => {
                   to our clients. Our client-centric approach ensures that every solution is tailored to 
                   address your unique business challenges and opportunities.
                 </p>
-                <p className="about-summary-text">
-                  As Nepal's preferred choice for business consultancy, we build lasting partnerships 
-                  that drive success and foster sustainable growth for businesses and individuals alike.
-                </p>
+               
                 <div className="about-summary-points">
                   <div className="about-point">
                     <div className="about-point-number">01</div>
@@ -158,13 +160,7 @@ export const AboutPage = () => {
                       <p>Cutting-edge approaches to business challenges</p>
                     </div>
                   </div>
-                  <div className="about-point">
-                    <div className="about-point-number">03</div>
-                    <div className="about-point-content">
-                      <h4>Dedicated Support</h4>
-                      <p>Continuous assistance for your business success</p>
-                    </div>
-                  </div>
+                 
                 </div>
               </div>
             </div>

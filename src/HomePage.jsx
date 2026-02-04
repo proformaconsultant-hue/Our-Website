@@ -8,14 +8,15 @@ import { CompanyDetail } from './components/CompanyDetail.jsx'
 import { Footer } from './components/Footer.jsx'
 import { sliderImages } from './imageUrls'
 
+
 export const HomePage = () => {
   return (
     <div className="home-page">
       <Header />
       <main className="home-content">
         <ImageSlider images={sliderImages} autoPlayInterval={2000} showText={true} />
+         <Introduction />
         <OurServices />
-        <Introduction />
         <HeroSection />
         <CompanyDetail />
       </main>
