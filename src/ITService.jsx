@@ -3,6 +3,7 @@ import { Header } from "./components/Header.jsx";
 import { Footer } from "./components/Footer.jsx";
 import { Sparkles, Cpu, Shield, Cloud, Code, Server, ArrowRight } from "lucide-react";
 import itImage from "./images/it-service.png";
+import { Link } from "react-router-dom";
 
 export const ITService = () => {
   const features = [
@@ -101,10 +102,10 @@ export const ITService = () => {
               Partner with our IT experts to build a robust, secure, and efficient technology foundation 
               that supports your business growth and innovation.
             </p>
-            <a href="/contact" className="cta-button">
+            <Link to="/contact" className="cta-button">
               Explore IT Solutions
               <ArrowRight size={18} />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

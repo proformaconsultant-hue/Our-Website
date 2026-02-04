@@ -1,5 +1,7 @@
+
 import { MapPin, Phone, Mail, Facebook } from 'lucide-react';
 import proformaLogo from '../images/proforma-logo-1.png';
+import { Link } from 'react-router-dom';
 
 export function Footer() {
   return (
@@ -36,21 +38,21 @@ export function Footer() {
         <div className="footer-quick-links">
           <h3 className="footer-section-title">Quick Links</h3>
           <ul className="footer-links-list">
-            <li><a href="#home">Home</a></li>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/insights">Insights</a></li>
-            <li><a href="/team">Our Team</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/insights">Insights</Link></li>
+            <li><Link to="/team">Our Team</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
           </ul>
         </div>
 
         <div className="footer-services-section">
           <h3 className="footer-section-title">Our Business</h3>
           <ul className="footer-links-list">
-            <li><a href="#accounting">Proforma Consultancy</a></li>
-            <li><a href="#finance">Om Finance Limited</a></li>
-            <li><a href="#packages">ABC Tution Centre</a></li>
-            <li><a href="#printpack">Print Pack Pvt. Ltd</a></li>
+            <li><Link to="#accounting">Proforma Consultancy</Link></li>
+            <li><Link to="#finance">Om Finance Limited</Link></li>
+            <li><Link to="#packages">ABC Tution Centre</Link></li>
+            <li><Link to="#printpack">Print Pack Pvt. Ltd</Link></li>
           </ul>
         </div>
       </div>

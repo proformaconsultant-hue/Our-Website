@@ -2,6 +2,8 @@ import { Footer } from "./components/Footer"
 import { Header } from "./components/Header"
 import { Mail, Phone, Linkedin, Award, Briefcase, Users, Globe } from "lucide-react"
 import image1 from '../src/images/samip-image.jpeg';
+
+import { Link } from "react-router-dom";
 export const Team = () => {
   const teamMembers = [
     {
@@ -162,12 +164,12 @@ export const Team = () => {
             Contact us today to discuss how our expert team can help your business grow
           </p>
           <div className="cta-buttons">
-            <a href="/contact" className="cta-button primary">
+            <Link to="/contact" className="cta-button primary">
               Contact Us
-            </a>
-            <a href="/services" className="cta-button secondary">
+            </Link>
+            <Link to="/services" className="cta-button secondary">
               Our Services
-            </a>
+            </Link>
           </div>
         </div>
       </div>

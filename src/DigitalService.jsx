@@ -3,6 +3,7 @@ import { Header } from './components/Header.jsx';
 import { Footer } from './components/Footer.jsx';
 import { Sparkles, Target, Search, Users, FileText, TrendingUp, BarChart, ArrowRight } from 'lucide-react';
 import digitalImage from './images/digitalrocket.png';
+import { Link } from 'react-router-dom';
 
 export const DigitalService = () => {
   const features = [
@@ -99,10 +100,10 @@ export const DigitalService = () => {
             <p className="cta-subtitle">
               Let's collaborate to create a digital strategy that delivers results and positions your brand for success in the digital marketplace.
             </p>
-            <a href="/contact" className="cta-button">
+            <Link to="/contact" className="cta-button">
               Start Digital Transformation
               <ArrowRight size={18} />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

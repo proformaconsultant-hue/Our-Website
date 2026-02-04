@@ -3,7 +3,7 @@ import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { Sparkles, Calculator, Shield, Globe, FileCheck, TrendingUp, ArrowRight } from "lucide-react";
 import taxImage from "./images/tax-service.jpg";
-
+import { Link } from "react-router-dom";
 export const TaxService = () => {
   const features = [
     {
@@ -101,10 +101,10 @@ export const TaxService = () => {
               Partner with our tax experts to develop a comprehensive tax strategy that protects your interests 
               and maximizes your financial potential.
             </p>
-            <a href="/contact" className="cta-button">
+            <Link to="/contact" className="cta-button">
               Get Tax Consultation
               <ArrowRight size={18} />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

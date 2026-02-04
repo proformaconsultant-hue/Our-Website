@@ -102,10 +102,10 @@ export const Accounting = () => {
               Partner with our accounting experts to establish efficient financial systems that provide 
               clarity, control, and confidence in your business decisions.
             </p>
-            <a href="/contact" className="cta-button">
+            <Link to="/contact" className="cta-button">
               Get Accounting Support
               <ArrowRight size={18} />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
