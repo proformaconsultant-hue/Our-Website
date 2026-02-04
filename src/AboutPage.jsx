@@ -7,6 +7,7 @@ import logo1 from './images/team-collab.jpg'
 import logo2 from './images/modern-infra.jpg'
 import logo3 from './images/client-consult.jpg'
 import logo4 from './images/strategic-planning.webp'
+import { Link } from 'react-router-dom'
 
 export const AboutPage = () => {
   const values = [
@@ -179,8 +180,8 @@ export const AboutPage = () => {
               and achieve sustainable success.
             </p>
             <div className="about-cta-buttons">
-              <a href="/contact" className="about-cta-button primary">Get Consultation</a>
-              <a href="/services" className="about-cta-button secondary">Our Services</a>
+              <Link to="/contact" className="about-cta-button primary">Get Consultation</Link>
+              <Link to="/services" className="about-cta-button secondary">Our Services</Link>
             </div>
           </div>
         </div>
