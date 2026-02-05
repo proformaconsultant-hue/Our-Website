@@ -31,12 +31,12 @@ export const TaxService = () => {
   return (
     <div className="tax-service-page">
       <Header />
-      
+
       {/* Hero Section */}
       <div className="tax-service-hero-section">
         <div className="hero-content">
           <h1 className="tax-service-hero-title">
-       
+
             Tax Services
           </h1>
           <p className="tax-service-hero-subtitle">
@@ -49,7 +49,7 @@ export const TaxService = () => {
         {/* Content Section */}
         <div className="tax-service-content-section">
           <h2 className="tax-service-content-title">Our Tax Services</h2>
-          
+
           <div className="services-container">
             <div className="services-left">
               <ul className="tax-services-list">
@@ -86,10 +86,10 @@ export const TaxService = () => {
           {/* Content Block */}
           <div className="services-content-block">
             <p className="tax-service-content-text">
-              At Proforma Insights, we provide comprehensive tax services designed to help businesses and individuals 
-              navigate the complexities of tax regulations. Our team of tax experts is committed to delivering 
-              personalized solutions that optimize your tax position while ensuring full compliance with all applicable laws. 
-              We stay updated with the latest tax developments to provide you with strategic advice that maximizes 
+              At Proforma Insights, we provide comprehensive tax services designed to help businesses and individuals
+              navigate the complexities of tax regulations. Our team of tax experts is committed to delivering
+              personalized solutions that optimize your tax position while ensuring full compliance with all applicable laws.
+              We stay updated with the latest tax developments to provide you with strategic advice that maximizes
               savings and minimizes liabilities.
             </p>
           </div>
@@ -98,7 +98,7 @@ export const TaxService = () => {
           <div className="service-cta">
             <h3 className="cta-title">Optimize Your Tax Strategy Today</h3>
             <p className="cta-subtitle">
-              Partner with our tax experts to develop a comprehensive tax strategy that protects your interests 
+              Partner with our tax experts to develop a comprehensive tax strategy that protects your interests
               and maximizes your financial potential.
             </p>
             <Link to="/contact" className="cta-button">
