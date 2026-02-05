@@ -83,7 +83,7 @@ export const Team = () => {
             </h1>
             <p className="hero-subtitle">
               A dedicated team of professionals committed to delivering exceptional 
-              financial and business consulting services with integrity and innovation.
+              financial and business consulting services.
             </p>
           </div>
         </div>

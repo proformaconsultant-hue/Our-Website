@@ -44,16 +44,16 @@ export const Header = () => {
                 <span>Sun-Fri: 9:00 AM - 5:00 PM</span>
               </div>
             </div>
-            
+
             <div className="top-bar-contact">
-                 <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=proformadigitaltech@gmail.com`}
-                         target="_blank"
-                          rel="noopener noreferrer"
-                          className="contact-link"
-                          title="Send Email" >
-                            <Mail size={14} />
-                            proformadigitaltech@gmail.com
-                      </a>
+              <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=proformadigitaltech@gmail.com`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-link"
+                title="Send Email" >
+                <Mail size={14} />
+                proformadigitaltech@gmail.com
+              </a>
               <a href="tel:+977061545445" className="contact-link">
                 <Phone size={14} />
                 <span>061-545445</span>
@@ -95,38 +95,38 @@ export const Header = () => {
 
             {/* Desktop Navigation */}
             <nav className="desktop-nav">
-              <Link 
-                to="/" 
+              <Link
+                to="/"
                 className={`nav-link ${location.pathname === '/' ? 'active' : ''}`}
               >
                 Home
               </Link>
-              <Link 
-                to="/about" 
+              <Link
+                to="/about"
                 className={`nav-link ${location.pathname === '/about' ? 'active' : ''}`}
               >
                 About Us
               </Link>
-              
-              <div 
+
+              <div
                 className="dropdown-container"
                 onMouseEnter={() => handleServicesHover(true)}
                 onMouseLeave={() => handleServicesHover(false)}
               >
-                <Link 
+                <Link
                   to="/services"
                   className={`dropdown-btn ${servicesDropdown ? 'active' : ''} ${location.pathname === '/services' ? 'active' : ''}`}
                 >
                   Our Services
                   <ChevronDown size={16} className={`dropdown-icon ${servicesDropdown ? 'rotated' : ''}`} />
                 </Link>
-                
+
                 {servicesDropdown && (
                   <div className="dropdown-content">
                     {services.map((service) => (
-                      <Link 
+                      <Link
                         key={service.path}
-                        to={service.path} 
+                        to={service.path}
                         className="dropdown-item"
                         onClick={handleServiceSelect}
                       >
@@ -137,19 +137,19 @@ export const Header = () => {
                 )}
               </div>
 
-              <Link 
-                to="/team" 
+              <Link
+                to="/team"
                 className={`nav-link ${location.pathname === '/team' ? 'active' : ''}`}
               >
                 Our Team
               </Link>
-              
+
               <Link to="/insights" className={`nav-link ${location.pathname === '/insights' ? 'active' : ''}`}>
                 Insights
               </Link>
-              
-              <Link 
-                to="/contact" 
+
+              <Link
+                to="/contact"
                 className={`nav-link ${location.pathname === '/contact' ? 'active' : ''}`}
               >
                 Contact
@@ -168,7 +168,7 @@ export const Header = () => {
             </Link>
 
             {/* Mobile Menu Button */}
-            <button 
+            <button
               className="mobile-menu-btn"
               onClick={toggleMobileMenu}
               aria-label="Toggle menu"
@@ -185,7 +185,7 @@ export const Header = () => {
         {/* Mobile Navigation */}
         <div className={`mobile-nav ${isMobileMenuOpen ? 'open' : ''}`}>
           <div className="mobile-nav-content">
-            <button 
+            <button
               className="mobile-close-btn"
               onClick={() => setIsMobileMenuOpen(false)}
               aria-label="Close menu"
@@ -194,32 +194,32 @@ export const Header = () => {
               <span></span>
             </button>
 
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               className={`mobile-nav-link ${location.pathname === '/' ? 'active' : ''}`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Home
             </Link>
-            <Link 
-              to="/about" 
+            <Link
+              to="/about"
               className={`mobile-nav-link ${location.pathname === '/about' ? 'active' : ''}`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               About Us
             </Link>
-            
+
             <div className="mobile-dropdown">
-              <button 
+              <button
                 className="mobile-dropdown-btn"
                 onClick={() => setServicesDropdown(!servicesDropdown)}
               >
                 Our Services
                 <ChevronDown size={16} className={`dropdown-icon ${servicesDropdown ? 'rotated' : ''}`} />
               </button>
-              
+
               <div className={`mobile-dropdown-content ${servicesDropdown ? 'open' : ''}`}>
-                <Link 
+                <Link
                   to="/services"
                   className="mobile-dropdown-item"
                   onClick={handleServiceSelect}
@@ -227,9 +227,9 @@ export const Header = () => {
                   All Services
                 </Link>
                 {services.map((service) => (
-                  <Link 
+                  <Link
                     key={service.path}
-                    to={service.path} 
+                    to={service.path}
                     className="mobile-dropdown-item"
                     onClick={handleServiceSelect}
                   >
@@ -239,14 +239,14 @@ export const Header = () => {
               </div>
             </div>
 
-            <Link 
-              to="/team" 
+            <Link
+              to="/team"
               className={`mobile-nav-link ${location.pathname === '/team' ? 'active' : ''}`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Our Team
             </Link>
-            
+
 
             <Link to="/insights" className={`mobile-nav-link ${location.pathname === '/insights' ? 'active' : ''}`}
               onClick={() => setIsMobileMenuOpen(false)}
@@ -255,8 +255,8 @@ export const Header = () => {
             </Link>
 
 
-            <Link 
-              to="/contact#inquiry" 
+            <Link
+              to="/contact#inquiry"
               className={`mobile-nav-link ${location.pathname === '/contact' ? 'active' : ''}`}
               onClick={() => setIsMobileMenuOpen(false)}
             >
@@ -268,17 +268,17 @@ export const Header = () => {
                 <Phone size={18} />
                 <span>061-545445</span>
               </a>
-             
+
 
 
               <a href={`https://mail.google.com/mail/?view=cm&fs=1&to=proformadigitaltech@gmail.com`}
-                         target="_blank"
-                          rel="noopener noreferrer"
-                          className="mobile-contact-link"
-                          title="Send Email" >
-                            <Mail size={18} />
-                            proformadigitaltech@gmail.com
-                      </a>
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mobile-contact-link"
+                title="Send Email" >
+                <Mail size={18} />
+                proformadigitaltech@gmail.com
+              </a>
             </div>
           </div>
         </div>
