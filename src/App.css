@@ -4822,7 +4822,7 @@ footer {
   background-size: cover;
 }
 
-.cta-title {
+.cta-title-1 {
   font-size: 2.5rem;
   color: white;
   margin-bottom: 20px;
@@ -4831,7 +4831,7 @@ footer {
   z-index: 1;
 }
 
-.cta-subtitle {
+.cta-subtitle-1 {
   font-size: 1.25rem;
   color: rgba(255, 255, 255, 0.9);
   max-width: 600px;

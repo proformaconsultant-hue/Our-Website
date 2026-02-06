@@ -165,8 +165,8 @@ export const Team = () => {
       {/* CTA Section */}
       <div className="container">
         <div className="team-cta-section">
-          <h2 className="cta-title">Ready to Work With Our Team?</h2>
-          <p className="cta-subtitle">
+          <h2 className="cta-title-1">Ready to Work With Our Team?</h2>
+          <p className="cta-subtitle-1">
             Contact us today to discuss how our expert team can help your business grow
           </p>
           <div className="cta-buttons">
