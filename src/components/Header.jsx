@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom';
-import { Mail, Phone, MapPin, ChevronDown, Clock, Facebook, Instagram, Linkedin, Youtube } from 'lucide-react';
+import { Mail, Phone, MapPin, ChevronDown, Clock, Facebook, Instagram, Linkedin } from 'lucide-react';
 import logo from '../images/proformaLogo.png';
 
 export const Header = () => {
@@ -70,9 +70,7 @@ export const Header = () => {
               <a href="https://www.linkedin.com/company/proforma-insight/" target="_blank" rel="noopener noreferrer" className="social-link">
                 <Linkedin size={14} />
               </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" className="social-link">
-                <Youtube size={14} />
-              </a>
+              
             </div>
           </div>
         </div>

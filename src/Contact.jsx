@@ -60,7 +60,7 @@ export const Contact = () => {
                 <MapPin size={28} />
               </div>
               <h3 className="card-title">Our Location</h3>
-              <p className="card-text">Pokhara-6, Ratnachowk</p>
+              <p className="card-text">Pokhara-8, Ratnachowk</p>
               <p className="card-text">Kaski, Nepal</p>
             </div>
 
@@ -140,7 +140,8 @@ export const Contact = () => {
                 </h3>
                 <div className="post-container">
                   <iframe
-                    src="https://www.instagram.com/p/DT2j84_DfML/embed"
+                    src="https://www.instagram.com/p/DUXYfKskWIi/embed"
+
                     height="500"
                     style={{ border: 'none', overflow: 'hidden' }}
                     scrolling="no"
