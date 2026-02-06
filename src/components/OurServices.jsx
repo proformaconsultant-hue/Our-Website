@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { BarChart3, Calculator, AlertCircle, Users } from 'lucide-react';
+import { BarChart3, Calculator, Monitor, Users } from 'lucide-react';
 
 export const OurServices = () => {
   const navigate = useNavigate();
-  const [selectedService, setSelectedService] = useState(0);
+  const [selectedService, setSelectedService] = useState(null);
 
   const services = [
     {
@@ -27,7 +27,7 @@ export const OurServices = () => {
     {
       id: 3,
       title: 'IT Services',
-      icon: AlertCircle,
+      icon: Monitor,
       description: 'Comprehensive IT solutions for modern businesses',
       path: '/it-service',
       color: '#003d82'
@@ -157,39 +157,46 @@ export const OurServices = () => {
         </motion.div>
 
         {/* Description Section */}
-        <motion.div className="service-description-section-clean" variants={childVariants}>
-          <div className="service-description-divider-clean"></div>
-
+        {selectedService !== null && (
           <motion.div
-            className="service-description-container-clean"
-            key={selectedService}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+            className="service-description-section-clean"
+            variants={childVariants}
+            initial="hidden"
+            animate="visible"
           >
-            <h3 className="service-selected-title-clean">
-              {services[selectedService].title}
-            </h3>
+            <div className="service-description-divider-clean"></div>
 
-            <p className="service-selected-description-clean">
-              {services[selectedService].description}
-            </p>
-
-            <motion.button
-              className="service-detail-button-clean"
-              onClick={() => navigate(services[selectedService].path)}
-              whileHover={{
-                y: -3,
-                boxShadow: '0 8px 25px rgba(0, 123, 255, 0.4)',
-                transition: { duration: 0.3 }
-              }}
-              whileTap={{ scale: 0.98 }}
+            <motion.div
+              className="service-description-container-clean"
+              key={selectedService}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
             >
-              Learn more
-              <span className="arrow">›</span>
-            </motion.button>
+              <h3 className="service-selected-title-clean">
+                {services[selectedService].title}
+              </h3>
+
+              <p className="service-selected-description-clean">
+                {services[selectedService].description}
+              </p>
+
+              <motion.button
+                className="service-detail-button-clean"
+                onClick={() => navigate(services[selectedService].path)}
+                whileHover={{
+                  y: -3,
+                  boxShadow: '0 8px 25px rgba(0, 123, 255, 0.4)',
+                  transition: { duration: 0.3 }
+                }}
+                whileTap={{ scale: 0.98 }}
+              >
+                Learn more
+                <span className="arrow">›</span>
+              </motion.button>
+            </motion.div>
           </motion.div>
-        </motion.div>
+        )}
       </div>
     </motion.div>
   );
