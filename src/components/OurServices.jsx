@@ -21,7 +21,7 @@ export const OurServices = () => {
       title: 'Tax Services',
       icon: BarChart3,
       description: 'Expert tax planning and compliance solutions',
-      path: '/tax-service',
+      path: '/tax',
       color: '#0056b3'
     },
     {
@@ -29,7 +29,7 @@ export const OurServices = () => {
       title: 'IT Services',
       icon: Monitor,
       description: 'Comprehensive IT solutions for modern businesses',
-      path: '/it-service',
+      path: '/it',
       color: '#003d82'
     },
     {
@@ -37,7 +37,7 @@ export const OurServices = () => {
       title: 'Digital Solutions',
       icon: Users,
       description: 'Innovative digital transformation strategies',
-      path: '/digital-service',
+      path: '/digital',
       color: '#002856'
     }
   ];
