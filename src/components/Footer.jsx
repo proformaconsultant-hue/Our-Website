@@ -57,8 +57,14 @@ export function Footer() {
           </div>
           <div className="contact-item">
             <Phone size={18} />
-            <a href="tel:+97761545445">+977-61-545445</a>
+            <a href="tel:+977061545445">+061-545445</a>
           </div>
+
+        <div className="contact-item">
+            <Phone size={18} />
+            <a href="tel:+9779744500107">+977-9744500107</a>
+          </div>
+
           <div className="contact-item">
             <Mail size={18} />
             <a href="mailto:proforma@gmail.com">proforma@gmail.com</a>
